@@ -1,9 +1,9 @@
 <?php
 
-function plugin_testplugin_install() {
+function plugin_authplugin_install() {
    return true;
 }
 
-function plugin_testplugin_uninstall() {
+function plugin_authplugin_uninstall() {
    return true;
 }

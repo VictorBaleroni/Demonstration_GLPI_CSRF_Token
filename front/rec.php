@@ -4,8 +4,10 @@ include('../../../inc/includes.php');
 
 global $CFG_GLPI;
 
-Html::header('Meu Plugin form', $_SERVER['PHP_SELF'], 'tools', 'PluginTestpluginForm');
+Html::header('Auth Plugin', $_SERVER['PHP_SELF'], 'tools', 'PluginAuthpluginReceive');
 
 if(isset($_POST['test'])){
   echo 'Receive Post: '.$_POST['test'];
 }
+
+Html::footer();

@@ -1,15 +1,15 @@
 <?php
 
-define('PLUGIN_TESTPLUGIN_VERSION', '1.0.0');
+define('PLUGIN_AUTHPLUGIN_VERSION', '1.0.0');
 
-function plugin_init_testplugin() {
+function plugin_init_authplugin() {
    global $PLUGIN_HOOKS;
 
-   $PLUGIN_HOOKS['csrf_compliant']['testplugin'] = true;
-   $PLUGIN_HOOKS['menu_toadd']['testplugin'] = [
+   $PLUGIN_HOOKS['csrf_compliant']['authplugin'] = true;
+   $PLUGIN_HOOKS['menu_toadd']['authplugin'] = [
      'tools' => [ 
-      PluginTestpluginMenu::class,
-      PluginTestpluginForm::class 
+      PluginAuthpluginReceive::class,
+      PluginAuthpluginSender::class 
      ]
    ];
    
@@ -17,10 +17,10 @@ function plugin_init_testplugin() {
    //$PLUGIN_HOOKS['add_css']['meuplugin'] = 'css/meuplugin.css';
 }
 
-function plugin_version_testplugin() {
+function plugin_version_authplugin() {
    return [
-      'name'           => 'Plugin Test',
-      'version'        => PLUGIN_TESTPLUGIN_VERSION,
+      'name'           => 'Plugin auth',
+      'version'        => PLUGIN_AUTHPLUGIN_VERSION,
       'author'         => 'Victor',
       'license'        => 'GPLv2+',
       'homepage'       => 'https://test.com',
@@ -28,10 +28,10 @@ function plugin_version_testplugin() {
    ];
 }
 
-function plugin_testplugin_check_prerequisites() {
+function plugin_authplugin_check_prerequisites() {
    return true;
 }
 
-function plugin_testplugin_check_config() {
+function plugin_authplugin_check_config() {
    return true;
 }

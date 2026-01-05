@@ -4,11 +4,11 @@ include('../../../inc/includes.php');
 
 global $CFG_GLPI;
 
-Html::header('Meu Plugin', $_SERVER['PHP_SELF'], 'tools', 'PluginTestpluginMenu');
+Html::header('Auth Plugin', $_SERVER['PHP_SELF'], 'tools', 'PluginAuthpluginSender');
 
-  $path = $CFG_GLPI['root_doc'] . "/plugins/testplugin/front/processa.php";
+  $path = $CFG_GLPI['root_doc'] . "/plugins/authplugin/front/rec.php";
 //first method to create form with token csrf
-  echo '<form method="POST" action="processa.php" >';
+  echo '<form method="POST" action="'.$path.'" >';
     echo Html::input('test', ['placeholder' => 'test123']);
     echo Html::submit('enviar', []);
   Html::closeForm();

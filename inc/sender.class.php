@@ -1,6 +1,6 @@
 <?php
 
-class PluginTestpluginMenu extends CommonGLPI {
+class PluginAuthpluginSender extends CommonGLPI {
 
    static function getMenuName() {
       return 'Test de Plugin';
@@ -8,8 +8,8 @@ class PluginTestpluginMenu extends CommonGLPI {
 
    static function getMenuContent() {
       $menu = [];
-      $menu['title'] = 'Test Plugin';
-      $menu['page']  = '/plugins/testplugin/front/index.php';
+      $menu['title'] = 'Sender Page';
+      $menu['page']  = '/plugins/authplugin/front/send.php';
       return $menu;
    }
 }
