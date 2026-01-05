@@ -13,4 +13,3 @@ class PluginTestpluginMenu extends CommonGLPI {
       return $menu;
    }
 }
-

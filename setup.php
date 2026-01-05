@@ -35,4 +35,3 @@ function plugin_testplugin_check_prerequisites() {
 function plugin_testplugin_check_config() {
    return true;
 }
-
